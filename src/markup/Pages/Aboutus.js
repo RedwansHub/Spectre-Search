@@ -62,12 +62,10 @@ function Aboutus(){
 															projectId="tzkhk12b"
 															dataset="production"/>
 											*/}
-
-											<Link to={"#"} className="site-button">Read More</Link>
 										</div>
 										<div className="col-md-12 col-lg-6">
 											
-										 <img src={urlFor(data.image).width(800).url()} alt=""/>
+										 <img src={urlFor(data.image).width(500).url()} alt=""/>
 											
 										</div>
 									</div>
@@ -91,6 +89,30 @@ function Aboutus(){
 										</div>
 									</div>
 								))}
+							</div>
+							<div className="row align-items-center m-b50 m-t50">
+								<div className="col-md-12 col-lg-6 m-b20 ">
+									<h2 className="m-b25">What makes us different</h2>
+									<p className="m-b15">Our size is our strength. We’re small enough to care but big enough to make an impact. 
+														Genuine passion and enthusiasm for what we do, combined with a deep understanding of our 
+														sectors and our ability to respond and adapt swiftly to clients’ needs is what makes us unique.</p>
+									
+									<p className=''>Our success is our people. We pride ourselves on our commitment to our most important assets – our people – 
+										through recognition and rewards. We take care of them so that they can take care of you.</p>
+									
+								</div>
+								<div className="col-md-12 col-lg-6">
+								<p className="m-b15 m-t10">Our core values underpin everything we do and are reflected by our people. Respect, determination, teamwork, integrity, 
+													understanding and fun are central to how we work with each other and our clients and candidates. 
+													Our consultants take the time to understand your needs and are dedicated to guiding and supporting you through the recruitment process.</p>
+									
+									
+								<p className="m-b15">Our relationships set us apart. We work closely with some of the largest organisations in further 
+													education, housing, social care, charity and more. Our clients trust us with exciting and often exclusive roles, 
+													so you can be confident that you’ll find an opportunity that matches your skill and ambition.</p>
+									
+									
+								</div>
 							</div>					
 						</div>
 					</div>						

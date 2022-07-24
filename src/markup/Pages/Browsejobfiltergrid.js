@@ -1,5 +1,5 @@
 import React, {useEffect, useState} from 'react';
-import {Link} from 'react-router-dom';
+import {Link, Route, useParams} from 'react-router-dom';
 import { urlFor, client } from '../../client';
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
@@ -9,29 +9,9 @@ import Accordsidebar from './../Element/Accordsidebar';
 
 var bnr = require('./../../images/banner/bnr1.jpg');
 
-const jobBlog = [
-	{
-		title : 'Digital Marketing Executive',
-	},
-	{
-		title : 'Digital Marketing Executive',
-	},
-	{
-		title : 'Digital Marketing Executive',
-	},
-	{
-		title : 'Digital Marketing Executive',
-	},
-	{
-		title : 'Digital Marketing Executive',
-	},
-	{
-		title : 'Digital Marketing Executive',
-	},
-]
-
 function Browsejobfiltergrid(){
 
+	
 	const [jobInfo, setJobInfo] = useState([]);
 
 	useEffect(() => {
@@ -56,7 +36,7 @@ function Browsejobfiltergrid(){
 								<Accordsidebar />
 								<div className="col-xl-9 col-lg-8 col-md-7">
 									<div className="job-bx-title clearfix">
-										<h5 className="font-weight-700 pull-left text-uppercase">2269 Jobs Found</h5>
+										<h5 className="font-weight-700 pull-left text-uppercase">6 Jobs Found</h5>
 										<div className="float-right">
 											<span className="select-title">Sort by freshness</span>
 											<select className="custom-btn">
@@ -66,8 +46,10 @@ function Browsejobfiltergrid(){
 												<option>Last 3 Days</option>
 											</select>
 											<div className="float-right p-tb5 p-r10">
-												<Link to={"/browse-job-filter-list"} className="p-lr5"><i className="fa fa-th-list"></i></Link>
-												<Link to={"/browse-job-filter-grid"} className="p-lr5"><i className="fa fa-th"></i></Link>
+												<Route>
+													<Link to={"/browse-job-list"} className="p-lr5"><i className="fa fa-th-list"></i></Link>
+													<Link to={"/browse-job"} className="p-lr5"><i className="fa fa-th"></i></Link>
+												</Route>
 											</div>
 										</div>
 									</div>
@@ -75,12 +57,12 @@ function Browsejobfiltergrid(){
 										{jobInfo.map((item,index) => (
 											<li className="col-lg-6 col-md-12" key={index} >
 												<div className="post-bx ">
-														<div className='m-auto' >	
-															<h5><Link to={"/job-detail"}>{item.title}</Link></h5>
+														<div className='m-auto ' style={{ backgroundColor: 'gray', height: "150px"}}  >	
+															<h5 className='text-center p-t50 p-l5'><Link to={"/job-detail"}>{item.title}</Link></h5>
 														</div>
-													<div className="d-flex m-b20 p-t50">
+													<div className="d-flex m-b20 p-t20">
 														<div className="job-post-info">
-															<ul>
+															<ul >
 																<li><i className="fa fa-map-marker"></i>{item.location}</li>
 																<li><i className="fa fa-bookmark-o"></i> {item.jobType}</li>
 																<br />
@@ -94,7 +76,7 @@ function Browsejobfiltergrid(){
 																<img src={urlFor(item.image).width(65).url()} alt="" />
 															</Link>
 															<Link to={'#'} className="name">{item.recruiter}</Link>
-															<Link to={'/job-detail'} className="site-button">See details</Link>
+															<Link to={`/job-detail/${item.title}`} params={item.title} className="site-button">See details</Link>
 														</div>
 														<div className="">
 														</div>

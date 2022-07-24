@@ -8,7 +8,6 @@ import Jobfindbox from './../Element/Jobfindbox';
 import Accordsidebar from './../Element/Accordsidebar';
 
 //Images
-import logo from './../../images/logo/icon1.png';
 var bnr = require('./../../images/banner/bnr1.jpg');
 
 
@@ -31,9 +30,7 @@ function Browsejobfilterlist(){
 		<>
 			<Header />
 			<div className="page-content bg-white">
-				<div style={{height: '70px'}}>
-					
-				</div>
+				<div style={{height: '70px'}}></div>
 				<Jobfindbox />
 				<div className="content-block">
 					<div className="section-full browse-job p-b50">
@@ -52,8 +49,8 @@ function Browsejobfilterlist(){
 												<option>Last 3 Days</option>
 											</select>
 											<div className="float-right p-tb5 p-r10">
-												<Link to={"/browse-job"} className="p-lr5"><i className="fa fa-th-list"></i></Link>
-												<Link to={"/browse-job-filter-grid"} className="p-lr5"><i className="fa fa-th"></i></Link>
+												<Link to={"/browse-job-filter-list"} className="p-lr5"><i className="fa fa-th-list"></i></Link>
+												<Link to={"/browse-job"} className="p-lr5"><i className="fa fa-th"></i></Link>
 											</div>
 										</div>
 									</div>
@@ -69,6 +66,7 @@ function Browsejobfilterlist(){
 														</div>
 														<div className="job-post-info">
 															<h4><Link to={"/job-detail"}>{item.title}</Link></h4>
+															
 															<ul>
 															<li><i className="fa fa-map-marker"></i>{item.location}</li>
 																<li><i className="fa fa-bookmark-o"></i> {item.jobType}</li>
@@ -78,10 +76,10 @@ function Browsejobfilterlist(){
 													</div>
 													<div className="d-flex">
 														<div className="job-time mr-auto">
-															<Link to={"#"}><span>{item.company}</span></Link>
+															<Link to={"#"}><span>Information Technology</span></Link>
 														</div>
 														<div className="detailsbtn">
-															<Link to={'/job-detail'} className="site-button">See details</Link>
+															<Link to={`/job-details/${item.title}`} className="site-button">See details</Link>
 														</div>
 														<div className="applybtn">
 															<Link to={'/job-details'} className="site-button"  style={{background: 'gray'}}>Quick Apply</Link>

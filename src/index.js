@@ -12,15 +12,15 @@ import SimpleReactLightbox from "simple-react-lightbox";
 //ReactDOM.render(<App />, document.getElementById('root'));
 
 ReactDOM.render(
-	<React.StrictMode>
+	
 		<Provider store = {store}>
             <SimpleReactLightbox>
                 <BrowserRouter basename='/'>
                     <App />
                 </BrowserRouter>    
             </SimpleReactLightbox>
-        </Provider>	
-	</React.StrictMode>,
+        </Provider>,
+	
   document.getElementById("root")
 );
 reportWebVitals();

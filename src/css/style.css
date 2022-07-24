@@ -11008,6 +11008,9 @@ footer.text-white {
 footer p {
     margin-bottom: 10px;
 }
+footer h5 {
+    font-size: 15px;
+}
 footer p,
 footer li {
     font-size: 14px;
@@ -11024,6 +11027,10 @@ footer p {
 footer .widget ul {
     list-style: none;
     margin-top: 5px;
+}
+footer .contact-icons{
+    padding-top: 80px;
+    padding-left: 150px;
 }
 /*widget li in footer*/
 

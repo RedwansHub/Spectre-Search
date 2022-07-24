@@ -10,8 +10,8 @@ import Jobsection from './../Element/Jobsection';
 import Owltestimonial from './../Element/Owlblog1';
 
 //Images
-var bnr2 = require('./../../images/background/bg4.jpg');
-var bnr3 = require('./../../images/lines.png');
+var aboutImage = require('./../../images/img1.jpg');
+
 
 function Homepage(){
 	return(
@@ -26,19 +26,41 @@ function Homepage(){
 								<h2 className="m-b5">Browse our Jobs by Categories</h2>
 							</div>
 						</div>
+						
 						<Jobcategories />
+						<div className='mb-5 mt-20'>
+							<hr className='solid'/>
+						</div>
+						<div className="section-head d-flex head-counter clearfix">
+							<div className="mr-auto">
+								<h2 className="m-b5">About Spectre Search</h2>
+							</div>
+						</div>
+						<div className='section-head d-flex'>
+							<div className='row'>
+								<div className='col-xl-6'>
+									<p>Morgan Hunt is a multi-award-winning UK recruitment agency with offices in London, 
+										Birmingham, Manchester, Glasgow and Milton Keynes. We provide specialist recruitment 
+										services to organisations across the public, private and not for profit sectors.
+										<br /> <br />
+										Founded in 1994, we’ve become renowned for connecting talented candidates and brilliant 
+										organisations within the charity, education, finance, government, housing, professional 
+										services, property & construction, social care and technology sectors.
+									</p>
+									<Link to='/about-us' className='site-button'>More About Us</Link>
+									
+								</div>
+								<div className='col-xl-6'>
+									<img src={aboutImage} alt="aboutUs" style={{width: '80%'}}/>
+								</div>
+
+							</div>
+
+						</div>
+
 					</div>
 				</div>		
-				<Jobsection />
-				<div className="section-full p-tb70 overlay-black-dark text-white text-center bg-img-fix" style={{backgroundImage: "url(" + bnr2 + ")"}}>
-					<div className="container">
-						<div className="section-head text-center text-white">
-							<h2 className="m-b5">Testimonials</h2>
-							<h5 className="fw4">Few words from candidates</h5>
-						</div>
-						<Owltestimonial />
-					</div>
-				</div>	
+				
 				
 			</div>	
 			<Footer />

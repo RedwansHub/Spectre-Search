@@ -1,12 +1,12 @@
 import React from 'react';
 import {Link} from 'react-router-dom';
-import Header2 from './../Layout/Header2'; 
+import Header from './../Layout/Header'; 
 import Footer from './../Layout/Footer'; 
 
 function Changepasswordpage(){
 	return(
 		<>
-			<Header2 />
+			<Header />
 			<div className="page-content bg-white">
 				<div className="content-block">
 					<div className="section-full bg-white browse-job p-t50 p-b20">
@@ -52,10 +52,6 @@ function Changepasswordpage(){
 												<li><Link to={"/jobs-alerts"}>
 													<i className="fa fa-bell-o" ></i> 
 													<span>Job Alerts</span></Link>
-												</li>
-												<li><Link to={"/jobs-cv-manager"}>
-													<i className="fa fa-id-card-o" ></i> 
-													<span>CV Manager</span></Link>
 												</li>
 												<li><Link to={"/jobs-change-password"} className="active">
 													<i className="fa fa-key" ></i> 

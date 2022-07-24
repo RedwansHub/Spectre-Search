@@ -6,7 +6,7 @@ import {Form} from 'react-bootstrap';
 import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 // import Logout from './Logout';
-import CvModal from './CvModal';
+// import CvModal from './CvModal';
 
 import logo2 from './../../images/spectre.png';
 var bnr3 = require('./../../images/background/bg3.jpg');
@@ -123,7 +123,7 @@ class Header extends Component{
 										
 										<li><Link to={"/contact"}>Contact Us</Link></li>
 										{/* <li><Link to={"/login"} className="site-button">Login / Register</Link></li> */}
-										<li><Link to={'#'} className="site-button" style={{width: '150px' }}> Profile </Link>
+										<li><Link to={'/Login'}  style={{width: '160px' }}> Sign In/Register </Link>
 											<ul className="sub-menu">
 											<li><Link to={"/jobs-profile"} className="dez-page">My Profile</Link></li>
 												<li><Link to={"/jobs-my-resume"} className="dez-page">My Resume </Link></li>
@@ -141,7 +141,7 @@ class Header extends Component{
 				</header>
 				
 				{/*  Model Start */}
-				   <CvModal /> <Modal  className=" lead-form-modal"  show={this.state.show} onHide={this.handleClose} centered >
+				 <Modal  className=" lead-form-modal"  show={this.state.show} onHide={this.handleClose} centered >
 					<div className="modal-dialog" role="document">
 						<div className="modal-content">
 							<button type="button" className="close" onClick={this.handleClose}>

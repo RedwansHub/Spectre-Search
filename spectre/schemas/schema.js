@@ -7,7 +7,7 @@ import schemaTypes from 'all:part:@sanity/base/schema-type'
 import about from './about'
 import team from './team'
 import jobs from './jobs'
-
+import jobCategory from './job-category'
 // Then we give our schema to the builder and provide the result to Sanity
 export default createSchema({
   // We name our schema
@@ -20,5 +20,6 @@ export default createSchema({
     about,
     team,
     jobs,
+    jobCategory,
   ]),
 })

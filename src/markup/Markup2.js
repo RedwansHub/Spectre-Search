@@ -5,7 +5,6 @@ import { Route, Switch } from 'react-router-dom';
 
 
 import Homepage from './Pages/Homepage1';
-import InnerHomepage from './Pages/InnerHomepage';
 
 import Jobprofile from './Pages/Jobprofile';
 import Jobmyresume from './Pages/Jobmyresume';
@@ -23,11 +22,12 @@ import Browsejobfilterlist from './Pages/Browsejobfilterlist';
 import Browsejobfiltergrid from './Pages/Browsejobfiltergrid';
 import Jobdetail from './Pages/Jobdetail';
 
+// import job from ``
+
 import Aboutus from './Pages/Aboutus';
 import Contact from './Pages/Contact';
 import Register from './Pages/Register1';
 import Login from './Pages/Loginpage1';
-import Login2 from './Pages/Loginpage2';
 
 import ScrollToTop from './Element/ScrollToTop';
 import Error404 from './Pages/Error404'
@@ -59,17 +59,16 @@ const Markup2 = () => {
                 <Route path='/browse-candidates' exact component={Error404} /> 
 
             {/* ---- Jobs Browsing ---  */}
-                <Route path='/browse-job' exact component={Browsejobfilterlist} />
-				<Route path='/browse-job-filter-grid' exact component={Browsejobfiltergrid} />
+                <Route path='/browse-job' exact component={Browsejobfiltergrid} />
+                <Route path='/browse-job-list' exact component={Browsejobfilterlist} />
 				
-                <Route path='/job-detail' exact component={Jobdetail} />
-				
+                <Route path='/job-detail/:job' component={Jobdetail} />
+                
                 <Route path='/about-us' exact component={Aboutus} />
-                <Route path='/contact' exact component={Contact} />
+                <Route path='/contact'  exact component={Contact} />
 
                 <Route path='/register' exact component={Register} />
                 <Route path='/login' exact component={Login} />
-                <Route path='/login2' exact component={Login2} />
 
 
 

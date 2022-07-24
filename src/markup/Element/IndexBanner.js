@@ -50,7 +50,7 @@ class IndexBanner extends Component{
 									</div>
 									<div className="col-lg-3 col-md-6">
 										<div className="form-group">
-											<label>Email address</label>
+											<label>Location</label>
 											<div className="input-group">
 												<input type="text" className="form-control" placeholder="" />
 												<div className="input-group-append">
@@ -79,7 +79,7 @@ class IndexBanner extends Component{
 										</div>
 									</div>
 									<div className="col-lg-2 col-md-6">
-										<button type="submit" to="/browse-job" className="site-button btn-block">Find Job</button>
+										<Link to="/browse-job" className="site-button btn-block">Find Job</Link>
 									</div>
 								</div>
 							</form>

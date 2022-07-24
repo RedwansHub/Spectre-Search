@@ -35,12 +35,12 @@ export default {
         {
             name: 'desc',
             title: 'Description',
-            type: 'string',
-            // of: [
-            //     { 
-            //         type: 'block'
-            //     }
-            // ]
+            type: 'array',
+            of: [
+                 { 
+                     type: 'block'
+                 }
+             ]
         },
         {
             name: 'requirement',

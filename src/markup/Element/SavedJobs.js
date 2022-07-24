@@ -184,7 +184,7 @@ const SavedJobs = () =>{
 							<tr key={index}>
 								<td className="job-post-company">
 									<Link to={"#"}><span>
-										<img alt="" src={require("./../../images/logo/icon2.png")} />
+										<img alt="" src={require("./../../images/Spectre-Logo.png")} />
 									</span></Link>
 								</td>
 								<td className="job-name"><Link to={"/job-detail"}>{contact.title}</Link></td>

@@ -9,7 +9,7 @@ function Accordsidebar(){
 	const [ value, setValue ] = useState(0); 
 	
 	return(
-		<div className="col-xl-3 col-lg-4 col-md-5 m-b30">
+		<div className="col-xl-3 col-lg-4 col-md-5 m-b10">
 			<aside id="accordion1" className=" sidebar-filter">
 				<Accordion defaultActiveKey="0" flush>
 					<h6 className="title"><i className="fa fa-sliders m-r5"></i> Refined Search <Link to={"#"} className="font-12 float-right">Reset All</Link></h6>
@@ -42,7 +42,7 @@ function Accordsidebar(){
 						<Accordion.Toggle as={Card} eventKey="1">
 							<div className="acod-head">
 								<h6 className="acod-title"> 
-									<a data-toggle="collapse" href="#experience" className="collapsed">Profession</a>
+									<a data-toggle="collapse" href="#profession" className="collapsed">Profession</a>
 								</h6>
 							</div>
 						</Accordion.Toggle>
@@ -81,7 +81,7 @@ function Accordsidebar(){
 						</Accordion.Toggle>
 						
 						<Accordion.Collapse eventKey="2">
-							<div id="companies" className="acod-body collapse show">
+							<div id="location" className="acod-body collapse show">
 								<div className="acod-content">
 									<div className="custom-control custom-checkbox">
 										<input className="custom-control-input" id="location1" type="checkbox" name="checkbox-locations" />
@@ -110,7 +110,7 @@ function Accordsidebar(){
 						<Accordion.Toggle as={Card} eventKey="3">
 							<div className="acod-head">
 								<h6 className="acod-title"> 
-									<a data-toggle="collapse"  href="#job-function" className="collapsed" >
+									<a data-toggle="collapse"  href="#remote-work" className="collapsed" >
 										Remote Work 
 									</a>
 								</h6>
@@ -133,14 +133,14 @@ function Accordsidebar(){
 						<Accordion.Toggle as={Card} eventKey="4">
 							<div className="acod-head">
 								<h6 className="acod-title"> 
-									<a data-toggle="collapse"  href="#industry" className="collapsed" >
+									<a data-toggle="collapse"  href="#job-type" className="collapsed" >
 										Job Type 
 									</a>
 								</h6>
 							</div>
 						</Accordion.Toggle>
 						<Accordion.Collapse eventKey="4">
-							<div id="industry" className="acod-body collapse show">
+							<div id="job-type" className="acod-body collapse show">
 								<div className="acod-content">
 									<div className="custom-control custom-radio">
 										<input className="custom-control-input" id="industry1" type="radio" name="radio-industry" />
@@ -165,26 +165,3 @@ function Accordsidebar(){
 	)
 }
 export default Accordsidebar; 
-
-{/* 
-	<div className="custom-control custom-radio">
-										<input className="custom-control-input" id="salary-op1" type="radio" name="radio-currency" />
-										<label className="custom-control-label" htmlFor="salary-op1">0-1 lacs <span>(120)</span> </label>
-									</div>
-									<div className="custom-control custom-radio">
-										<input className="custom-control-input" id="salary-op2" type="radio" name="radio-currency" />
-										<label className="custom-control-label" htmlFor="salary-op2">1-2 lacs <span>(300)</span> </label>
-									</div>
-									<div className="custom-control custom-radio">
-										<input className="custom-control-input" id="salary-op3" type="radio" name="radio-currency" />
-										<label className="custom-control-label" htmlFor="salary-op3">2-3 lacs <span>(235)</span> </label>
-									</div>
-									<div className="custom-control custom-radio">
-										<input className="custom-control-input" id="salary-op4" type="radio" name="radio-currency" />
-										<label className="custom-control-label" htmlFor="salary-op4">3-4 lacs <span>(568)</span></label>
-									</div>
-									<div className="custom-control custom-radio">
-										<input className="custom-control-input" id="salary-op5" type="radio" name="radio-currency" />
-										<label className="custom-control-label" htmlFor="salary-op5">4-5 lacs <span>(798)</span></label>
-									</div>
-*/}

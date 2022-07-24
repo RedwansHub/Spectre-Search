@@ -51,7 +51,7 @@ function Jobmyresume(){
 										</h4>
 										<p className="m-b15">Freelance Senior PHP Developer at various agencies</p>
 										<ul className="clearfix">
-											<li><i className="ti-location-pin"></i> Sacramento, California</li>
+											<li><i className="ti-location-pin"></i> Greenwich, London</li>
 											<li><i className="ti-mobile"></i> +1 123 456 7890</li>
 											<li><i className="ti-briefcase"></i> Fresher</li>
 											<li><i className="ti-email"></i> info@example.com</li>
@@ -194,7 +194,7 @@ function Jobmyresume(){
 												<i className="fa fa-pencil m-r5"></i> Edit
 											</Link>
 										</div>
-										<p className="m-b0">Job board currently living in USA</p>
+										<p className="m-b0">Senior PHP Developer currently living in Greenwich.</p>
 										
 										<Modal show={resume} onHide={setResume} className="modal fade modal-bx-info editor">
 											<div className="modal-dialog my-0" role="document">
@@ -667,10 +667,10 @@ function Jobmyresume(){
 											<h5 className="m-b15">Projects</h5>
 											<Link to={"#"} onClick={()=>setProjects(true)} className="site-button add-btn button-sm"><i className="fa fa-pencil m-r5"></i> Edit</Link>
 										</div>
-										<h6 className="font-14 m-b0">Job BoardEdit</h6>
+										<h6 className="font-14 m-b0">Customer Relationship Management for ISP</h6>
 										<p className="m-b0">w3itexpert (Offsite)</p>
-										<p className="m-b0">Dec 2018 to Present (Full Time)</p>
-										<p className="m-b0">Job Board Template</p>
+										<p className="m-b0">Dec 2018 to Feb 2019</p>
+										
 										
 										<Modal className="modal fade modal-bx-info editor" show={projects} onHide={setProjects}> 
 											<div className="modal-dialog my-0" role="document">
@@ -688,15 +688,6 @@ function Jobmyresume(){
 																	<div className="form-group">
 																		<label>Project Title</label>
 																		<input type="email" className="form-control" placeholder="Enter Project Title" />
-																	</div>
-																</div>
-																<div className="col-lg-12 col-md-12">
-																	<div className="form-group">
-																		<label>Tag this project with your Employment/Education</label>
-																		<select>
-																			<option>Class 12th</option>
-																			<option>Class 10th</option>
-																		</select>
 																	</div>
 																</div>
 																<div className="col-lg-12 col-md-12">
