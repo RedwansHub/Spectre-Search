@@ -2,12 +2,8 @@ import React from 'react';
 import {Link} from 'react-router-dom';
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
-import CountUp from 'react-countup';
 import IndexBanner from './../Element/IndexBanner';
 import Jobcategories from './../Element/Jobcategories';
-import Featureblog from './../Element/Featureblog';
-import Jobsection from './../Element/Jobsection';
-import Owltestimonial from './../Element/Owlblog1';
 
 //Images
 var aboutImage = require('./../../images/img1.jpg');
@@ -50,8 +46,8 @@ function Homepage(){
 									<Link to='/about-us' className='site-button'>More About Us</Link>
 									
 								</div>
-								<div className='col-xl-6'>
-									<img src={aboutImage} alt="aboutUs" style={{width: '80%'}}/>
+								<div className='col-xl-6 col-md-6 pt-10'>
+									<img src={aboutImage} alt="aboutUs" className='' style={{width: '80%'}}/>
 								</div>
 
 							</div>

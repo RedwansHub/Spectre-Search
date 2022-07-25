@@ -123,7 +123,7 @@ class Header extends Component{
 										
 										<li><Link to={"/contact"}>Contact Us</Link></li>
 										{/* <li><Link to={"/login"} className="site-button">Login / Register</Link></li> */}
-										<li><Link to={'/Login'}  style={{width: '160px' }}> Sign In/Register </Link>
+										<li><Link to={'/login'}  style={{width: '160px' }}> Sign In/Register </Link>
 											<ul className="sub-menu">
 											<li><Link to={"/jobs-profile"} className="dez-page">My Profile</Link></li>
 												<li><Link to={"/jobs-my-resume"} className="dez-page">My Resume </Link></li>

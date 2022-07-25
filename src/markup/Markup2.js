@@ -14,9 +14,9 @@ import Jobsavedjobs from './Pages/Jobsavedjobs';
 import Jobcvmanager from './Pages/Jobcvmanager';
 import Changepasswordpage from './Pages/Changepasswordpage';
 
-import Componypostjobs from './Pages/Componypostjobs';
-import Companymanage from './Pages/Companymanage';
-import Browsecandidates from './Pages/Browsecandidates';
+// import Componypostjobs from './Pages/Componypostjobs';
+// import Companymanage from './Pages/Companymanage';
+// import Browsecandidates from './Pages/Browsecandidates';
 
 import Browsejobfilterlist from './Pages/Browsejobfilterlist';
 import Browsejobfiltergrid from './Pages/Browsejobfiltergrid';

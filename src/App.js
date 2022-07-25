@@ -1,4 +1,4 @@
-import React,{  Suspense, useEffect, useState } from 'react';
+import React,{  Suspense, useEffect } from 'react';
 import Index from './markup/Markup2';
 import { connect, useDispatch } from 'react-redux';
 import {  Route, Switch, withRouter } from 'react-router-dom';
@@ -25,11 +25,61 @@ import SignUp from './markup/Pages/Register1';
 
 
 function App (props) {
+    const dispatch = useDispatch();
+    useEffect(() => {
+        checkAutoLogin(dispatch, props.history);
+    }, [dispatch, props.history]);
     
- return(
-    <Index />
- )   
+    let routes = (  
+        <Switch>
+            <Route path='/login' component={Login} />
+            <Route path='/register-1' component={SignUp} />
+        </Switch>
+    );
+    if (props.isAuthenticated) {
+		return (
+			<>
+                <Suspense fallback={
+                    <div id="preloader">
+                        <div className="sk-three-bounce">
+                            <div className="sk-child sk-bounce1"></div>
+                            <div className="sk-child sk-bounce2"></div>
+                            <div className="sk-child sk-bounce3"></div>
+                        </div>
+                    </div>  
+                   }
+                >
+                    <Index / >
+                </Suspense>
+            </>
+        );
+	
+	}else{
+		return (
+			<div className="vh-100">
+                <Suspense fallback={
+                    <div id="preloader">
+                        <div className="sk-three-bounce">
+                            <div className="sk-child sk-bounce1"></div>
+                            <div className="sk-child sk-bounce2"></div>
+                            <div className="sk-child sk-bounce3"></div>
+                        </div>
+                    </div>
+                  }
+                >
+                    {routes}
+                </Suspense>
+			</div>
+		);
+	}
+};
 
-} 
+const mapStateToProps = (state) => {
+    return {
+        isAuthenticated: isAuthenticated(state),
+    };
+};
 
-export default App;
+export default withRouter(connect(mapStateToProps)(App)); 
+
+//export default App;

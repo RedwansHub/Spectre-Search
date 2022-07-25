@@ -3,18 +3,14 @@ import {Link} from 'react-router-dom';
 import { urlFor, client } from '../../client';
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
-import PageTitle from './../Layout/PageTitle';
 import Jobfindbox from './../Element/Jobfindbox';
 import Accordsidebar from './../Element/Accordsidebar';
 
-//Images
-var bnr = require('./../../images/banner/bnr1.jpg');
 
 
 function Browsejobfilterlist(){
 
-	//const job = { title, location, salary, jobType, slug, desc, requirement, image } ;
-	
+
 	const [jobInfo, setJobInfo] = useState([]);
 
 	useEffect(() => {

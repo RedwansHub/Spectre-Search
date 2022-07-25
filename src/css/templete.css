@@ -491,6 +491,12 @@
 	font-weight: 600;
 }
 
+@media only screen and (max-width: 587px) {
+	.detailsbtn2{
+		margin-right: -150px;
+	}	
+}
+
 .featurd-job-list .job-company-logo {
     width: 120px;
     float: left;

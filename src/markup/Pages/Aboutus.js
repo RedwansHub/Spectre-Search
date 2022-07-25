@@ -7,20 +7,14 @@ import {Link} from 'react-router-dom';
 
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
-import Latestblogowl from './../Element/Owlblog2';
 
 var bnr1 = require('./../../images/banner/bnr1.jpg');
-var bnr2 = require('./../../images/background/bg4.jpg');
 
 function Aboutus(){
 
   const [aboutData, setAbout] = useState([]);
   const [teamData, setTeam] = useState([]);
-  const [img, setImg] = useState([false])
-  
-  const checkImage = (im) => {
-	
-  }
+
 
   useEffect(() => {
     const aboutQuery = '*[_type == "about"]'; 
@@ -111,31 +105,10 @@ function Aboutus(){
 													education, housing, social care, charity and more. Our clients trust us with exciting and often exclusive roles, 
 													so you can be confident that you’ll find an opportunity that matches your skill and ambition.</p>
 									
-									
 								</div>
 							</div>					
 						</div>
 					</div>						
-					<div className="section-full content-inner-2 call-to-action overlay-black-dark text-white text-center bg-img-fix" style={{backgroundImage:"url(" + bnr2 + ")"}}>
-						<div className="container">
-							<div className="row">
-								<div className="col-lg-12">
-									<h2 className="m-b10">Make a Difference with Your Online Resume!</h2>
-									<p className="m-b0">Lorem Ipsum is simply dummy text of the printing and typesetting industry.</p>
-									<Link to={"/register-2"} className="site-button m-t20 outline outline-2 radius-xl">Create an Account</Link>
-								</div>
-							</div>
-						</div>
-					</div>
-					<div className="section-full content-inner-2 overlay-white-middle">
-						<div className="container">
-							<div className="section-head text-black text-center">
-								<h2 className="text-uppercase m-b0">Our Latest Blog</h2>
-								<p>Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy.</p>
-							</div>
-							<Latestblogowl />
-						</div>
-					</div>
 				</div>
 			</div>
 			<Footer />

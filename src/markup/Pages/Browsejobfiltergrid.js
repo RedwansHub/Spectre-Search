@@ -3,7 +3,6 @@ import {Link, Route, useParams} from 'react-router-dom';
 import { urlFor, client } from '../../client';
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
-import PageTitle from './../Layout/PageTitle';
 import Jobfindbox from './../Element/Jobfindbox';
 import Accordsidebar from './../Element/Accordsidebar';
 
@@ -11,7 +10,8 @@ var bnr = require('./../../images/banner/bnr1.jpg');
 
 function Browsejobfiltergrid(){
 
-	
+	//const singleJob = useParams();
+
 	const [jobInfo, setJobInfo] = useState([]);
 
 	useEffect(() => {
@@ -57,7 +57,7 @@ function Browsejobfiltergrid(){
 										{jobInfo.map((item,index) => (
 											<li className="col-lg-6 col-md-12" key={index} >
 												<div className="post-bx ">
-														<div className='m-auto ' style={{ backgroundColor: 'gray', height: "150px"}}  >	
+														<div className='m-auto ' style={{ backgroundColor: 'lightblue', height: "150px"}}  >	
 															<h5 className='text-center p-t50 p-l5'><Link to={"/job-detail"}>{item.title}</Link></h5>
 														</div>
 													<div className="d-flex m-b20 p-t20">
@@ -76,7 +76,7 @@ function Browsejobfiltergrid(){
 																<img src={urlFor(item.image).width(65).url()} alt="" />
 															</Link>
 															<Link to={'#'} className="name">{item.recruiter}</Link>
-															<Link to={`/job-detail/${item.title}`} params={item.title} className="site-button">See details</Link>
+															<Link to={`/job-detail/${item.title}`} params={item.title} className="site-button ">See details</Link>
 														</div>
 														<div className="">
 														</div>
