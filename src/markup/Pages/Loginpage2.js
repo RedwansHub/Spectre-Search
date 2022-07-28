@@ -10,7 +10,7 @@ import loginbg from "./../../images/bg6.jpg";
 import logo2 from './../../images/logo-white2.png';
 
 function Login (props) {
-  const [email, setEmail] = useState('demo@example.com');
+    const [email, setEmail] = useState('demo@example.com');
     let errorsObj = { email: '', password: '' };
     const [errors, setErrors] = useState(errorsObj);
     const [password, setPassword] = useState('123456');

@@ -35,12 +35,13 @@ export default {
         {
             name: 'desc',
             title: 'Description',
-            type: 'array',
-            of: [
-                 { 
-                     type: 'block'
-                 }
-             ]
+            type: 'string',
+            // type: 'array',
+            // of: [
+            //      { 
+            //          type: 'block'
+            //      }
+            //  ]
         },
         {
             name: 'requirement',
@@ -58,6 +59,21 @@ export default {
             type: 'string',
         },
         {
+            name: 'recruiter',
+            title: 'Recruiter Name',
+            type: 'string',
+        },     
+        {
+            name: 'recTitle',
+            title: 'Recruiter Title',
+            type: 'string',
+        },
+        {
+            name: 'team',
+            title: 'Recruiter Team',
+            type: 'string',
+        },
+        {
             name: 'image',
             title: 'Company Image',
             type: 'image',
@@ -65,10 +81,5 @@ export default {
                 hotspot: true,
             }
         }, 
-        {
-            name: 'recruiter',
-            title: 'Recruiter Name',
-            type: 'string',
-        },     
     ]
 }

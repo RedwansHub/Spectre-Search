@@ -75,10 +75,10 @@ function Browsejobfilterlist(){
 															<Link to={"#"}><span>Information Technology</span></Link>
 														</div>
 														<div className="detailsbtn">
-															<Link to={`/job-details/${item.title}`} className="site-button">See details</Link>
+															<Link to={`/job-detail/${item.title}`} className="site-button">See details</Link>
 														</div>
 														<div className="applybtn">
-															<Link to={'/job-details'} className="site-button"  style={{background: 'gray'}}>Quick Apply</Link>
+															<Link to={`/Apply/${item.title}`} className="site-button"  style={{background: 'gray'}}>Quick Apply</Link>
 														</div>
 													</div>
 													<label className="like-btn">

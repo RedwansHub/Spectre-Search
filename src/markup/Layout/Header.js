@@ -1,4 +1,5 @@
 import React, { Component, useState } from 'react';
+import Axios from 'axios';
 import { Modal } from 'react-bootstrap';
 //import Modal from 'react-modal';
 import { Link } from 'react-router-dom';
@@ -7,31 +8,93 @@ import Row from 'react-bootstrap/Row';
 import Col from 'react-bootstrap/Col';
 // import Logout from './Logout';
 // import CvModal from './CvModal';
-
+import Emailjs from '@emailjs/browser';
 import logo2 from './../../images/spectre.png';
-var bnr3 = require('./../../images/background/bg3.jpg');
 
-
-class Header extends Component{
 	
-	validate = {
-		validated: false,
-	}; 
+class Header extends Component{
 
-	handleSubmit = (event) => {
-	  const form = event.currentTarget;
-	  if (form.checkValidity() === false) {
-		event.preventDefault();
-		event.stopPropagation();
-	  }
-  
-	  this.setValidated({ validated: true });
+	handleSubmit = (e) => {
+		e.preventDefault();
+		console.log(this.state);
+
+		var templateParams = {
+			subject: 'Candidate Application',
+			name: this.state.name + ' ' + this.state.surname,
+			Gender: this.state.gender,
+			dob: this.state.dob,
+			email: this.state.email,
+			phoneNumber: this.state.phoneNumber,
+			location: this.state.location,
+			message: 'Sending this from Visual Code!',
+			Cv: this.state.file,
+			attachments: [{
+				filename: this.state.file.name,
+				content: this.state.file
+			}]
+		};
+		 Emailjs.init("sN3zllzcIxcfjCdJ7");
+		 Emailjs.send('service_cqwk5o9', 'template_yo8me9n', templateParams)
+		 	.then(function(response) {
+		 	console.log('SUCCESS!', response.status, response.text);
+		 	}, function(error) {
+		 	console.log('FAILED...', error);
+		 	});
+
+			// Emailjs.sendForm('service_cqwk5o9', 'template_yo8me9n',)
 	};
+	handleForm = (e) => {
+		let {name, value} = e.target;
+		if(name === 'name'){
+			this.setState({name: value})
+		}
+		if(name === 'surname'){
+			this.setState({surname: value})
+		}
+		if(name === 'email'){
+			this.setState({email: value})
+		}
+		if(name === 'phoneNumber'){
+			this.setState({phoneNumber: value})
+		}
+		if(name === 'location'){
+			this.setState({location: value})
+		}
+		if(name === 'gender'){
+			this.setState({gender: value})
+		}
+		if(name === 'dob'){
+			this.setState({dob: value})
+		}
+		
+
+		let form = e.currentTarget;
+		if (form.checkValidity() === false) {
+			e.preventDefault();
+			e.stopPropagation();
+		}
+		this.setState({validated: true})
+		
+	};
+	handleFile(e) {
+		let file = e.target.files[0]
+		this.setState({file: file})
+	}
 
 	state = {
 		// initial state
+		name: '',
+		surname: '',
+		email: '',
+		phoneNumber: '',
+		location: '',
+		gender: '',
+		dob: '',
+		file: null,
 		show: false,
-	}
+		validated: false,
+	};
+
 	
 	handleClose = () => {
 		this.setState({ show: false });
@@ -40,7 +103,9 @@ class Header extends Component{
 		this.setState({ show: true });
 	};	
 	componentDidMount() {
-        // sidebar open/close
+		//Quick CV
+
+	  // sidebar open/close
 		
         var Navicon = document.querySelector('.navicon');
         var sidebarmenu = document.querySelector('.myNavbar ');
@@ -83,20 +148,6 @@ class Header extends Component{
 									<span></span>
 									<span></span>
 								</button> 
-								{/* <div className="extra-nav">
-									<div className="extra-cell"> */}
-										
-										{/* <ul className="sub-menu">
-												<li><Link to={"/jobs-profile"} className="dez-page">My Profile</Link></li>
-												<li><Link to={"/jobs-my-resume"} className="dez-page">My Resume </Link></li>
-												<li><Link to={"/jobs-applied-job"} className="dez-page">Applied Job </Link></li>
-											</ul> */}
-										{/* <Link to={"/register"} className="site-button"><i className="fa fa-user"></i> Sign Up</Link> */}
-										
-											{/* <Link to ={'#'} title="READ MORE" onClick={this.handleShow}  className="site-button"><i className="fa fa-lock"></i> login </Link> */}
-										{/* <Logout /> */}
-									 {/* </div>
-								</div> */}
 								  
 								<div className="header-nav navbar-collapse collapse myNavbar justify-content-start" id="navbarNavDropdown"> 
 									<div className="logo-header mostion d-md-block d-lg-none">
@@ -113,24 +164,24 @@ class Header extends Component{
 											</ul>
 										</li>
 										<li >
-											<Link to={'#'} >For Employers</Link>
-											<ul className="sub-menu">
+											<Link to={"/company-post-jobs"} >For Employers</Link>
+											{/* <ul className="sub-menu">
 												<li><Link to={"/company-post-jobs"} className="dez-page">Post A Jobs </Link></li>
 												<li><Link to={"/company-manage-job"} className="dez-page">Manage jobs </Link></li>
 												<li><Link to={"/browse-candidates"}  className="dez-page">Browse Candidates</Link></li>
-											</ul>
+											</ul> */}
 										</li>
 										
 										<li><Link to={"/contact"}>Contact Us</Link></li>
 										{/* <li><Link to={"/login"} className="site-button">Login / Register</Link></li> */}
-										<li><Link to={'/login'}  style={{width: '160px' }}> Sign In/Register </Link>
-											<ul className="sub-menu">
-											<li><Link to={"/jobs-profile"} className="dez-page">My Profile</Link></li>
+										<li><Link to={'/login'} > Sign In/Register </Link>
+											{/* <ul className="sub-menu">
+												<li><Link to={"/jobs-profile"} className="dez-page">My Profile</Link></li>
 												<li><Link to={"/jobs-my-resume"} className="dez-page">My Resume </Link></li>
 												<li><Link to={"/jobs-applied-job"} className="dez-page">Applied Job </Link></li>
 												<li><Link to={"/jobs-alerts"} className="dez-page">Jobs Alerts </Link></li>
 												<li><Link to={"/jobs-saved-jobs"} className="dez-page">Saved Job </Link></li>
-											</ul>
+											</ul> */}
 										</li>
 										
 									</ul>			
@@ -157,75 +208,72 @@ class Header extends Component{
 								<div className="col-lg-12 col-md-6 p-a0">
 									<div className="lead-form browse-job text-left">
 											<h3 className="m-t0">Send Us Your CV</h3>
-										<Form >
+										<form action="https://getform.io/f/338bd723-5c36-419b-9ed1-ab0a948a07db" 
+												method="POST" 
+												enctype="multipart/form-data"
+											>
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>First Name</Form.Label>
-													<Form.Control type= "name" placeholder='First Name '/>
+													<Form.Control required type= "name" name="name" placeholder='First Name' onChange={(e) => this.handleForm(e)} />
 												</Form.Group>
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Last Name</Form.Label>
-													<Form.Control type= "surname" placeholder='Last Name '/>
+													<Form.Control type= "surname" name="surname" placeholder='Last Name ' onChange={(e) => this.handleForm(e)} required/>
 												</Form.Group>
 											</Row>
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
+													<Form.Label>Gender</Form.Label>
+													<Form.Control required name="gender" as="select" custom className="select-btn" style={{height: '50px'}} onChange={(e) => this.handleForm(e)}>
+														<option> </option>
+														<option>Male</option>
+														<option>Female</option>
+														<option>Other</option>
+													</Form.Control>
+												</Form.Group>
+												<Form.Group  as={Col} md="6" >
+													<Form.Label>DOB</Form.Label>
+													<Form.Control required type= "dob" name="dob" placeholder='Enter Address' onChange={(e) => this.handleForm(e)}/>
+												</Form.Group>
+											</Row>
+											<Row className="mb-1">
+												<Form.Group  as={Col} md="6" >
 													<Form.Label>Email Address</Form.Label>
-													<Form.Control type= "email" placeholder='Enter your Email '/>
+													<Form.Control required type= "email" name="email" placeholder='Enter your Email ' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Mobile Number</Form.Label>
-													<Form.Control type= "nmber" placeholder='Mobile Number '/>
+													<Form.Control required type= "phoneNumber" name="phoneNumber" placeholder='Mobile Number ' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 											</Row>
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Location</Form.Label>
-													<Form.Control type= "location" placeholder='Location '/>
-												</Form.Group>
-												<Form.Group  as={Col} md="6" >
-													<Form.Label>Profession</Form.Label>
-													<Form.Control as="select" 
-														custom className="select-btn"
-														style={{height: '50px'}}>
-														<option>Choose Profession</option>
-														<option>Construction</option>
-														<option>Corodinator</option>
-														<option>Employer</option>
-														<option>Financial Career</option>
-														<option>Information Technology</option>
-														<option>Marketing</option>
-														<option>Quality check</option>
-														<option>Real Estate</option>
-														<option>Sales</option>
-														<option>Supporting</option>
-														<option>Teaching</option> 
-													</Form.Control>
-													
+													<Form.Control required type= "location" name="location" placeholder='Enter Address' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 											</Row>
+													
+											
 											
 											
 											{/* Add Upload CV */}
 											<Form.Group controlId="formFile" className="mb-3">
 												<Form.Label>Upload CV</Form.Label>
-												<Form.Control type="file" />
+												<Form.Control required type="file" name="file" onChange={(e) =>  this.handleFile(e)} />
 											</Form.Group>
 
 											{/* Add Combo Butoon for policy&Terms and Consent */}
-											<div className='form-group'>
-												<Form.Check 
-													type="switch"
-													id="custom-switch"
+											<Form.Group>
+												<Form.Check  required
 													label="I agree to the Terms and conditions."
 												/>
-											</div>
-
+											</Form.Group>
 											<div className="clearfix" style={{width: '45%'}}>
-												<button type="button" className="btn-primary site-button btn-block">Submit </button>
+												<button type="submit" className="btn-primary site-button btn-block" >Submit</button>
 											</div>
 												
-										</Form>
+										</form>
 										
 									</div>
 								</div>

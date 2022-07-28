@@ -44,6 +44,18 @@ function Footer(){
 							</div>
 						</div>
 						<div className="col-xl-5 col-lg-4 col-md-12 col-sm-12">
+							<p className="text-capitalize m-b20 m-t60">Spectre Search is a multi-award-winning recruitment agency with over 150 consultants across London, Birmingham, Manchester, Bristol and Glasgow..</p>
+								<div className="subscribe-form m-b10">
+									<form className="Subscribe" >
+										<div className="dzSubscribeMsg"></div>
+										<div className="input-group ">
+											<input name="dzEmail" required="required"  className="form-control" placeholder="Your Email Address" type="email" />
+											<span className="input-group-btn">
+												<button name="submit"  value="Submit" type="submit" className="site-button radius-xl">Subscribe</button>
+											</span> 
+										</div>
+									</form>
+								</div>
 							<div className="contact-icons">
 								
 								<ul className="list-inline m-a0 m-t20">
@@ -73,16 +85,3 @@ function Footer(){
 }
 
 export default Footer;
-
-{/* <p className="text-capitalize m-b20">Lorem Ipsum is simply dummy text of the printing and typesetting industry has been the industry's standard dummy text ever since the.</p>
-								<div className="subscribe-form m-b20">
-									<form className="dzSubscribe" action="script/mailchamp.php" method="post">
-										<div className="dzSubscribeMsg"></div>
-										<div className="input-group">
-											<input name="dzEmail" required="required"  className="form-control" placeholder="Your Email Address" type="email" />
-											<span className="input-group-btn">
-												<button name="submit" value="Submit" type="submit" className="site-button radius-xl">Subscribe</button>
-											</span> 
-										</div>
-									</form>
-								</div> */}

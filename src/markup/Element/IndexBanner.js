@@ -64,16 +64,11 @@ class IndexBanner extends Component{
 											<Form.Control as="select" custom className="select-btn">
 												<option>Select Sector</option>
 												<option>Construction</option>
-												<option>Corodinator</option>
-												<option>Employer</option>
-												<option>Financial Career</option>
+												<option>Housing, Revenues & Benefits</option>
+												<option>Admin & Customer Service</option>
+												<option>Human resources</option>
+												<option>Education</option>
 												<option>Information Technology</option>
-												<option>Marketing</option>
-												<option>Quality check</option>
-												<option>Real Estate</option>
-												<option>Sales</option>
-												<option>Supporting</option>
-												<option>Teaching</option> 
 											</Form.Control>
 											
 										</div>

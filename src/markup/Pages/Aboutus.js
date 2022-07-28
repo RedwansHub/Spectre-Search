@@ -1,14 +1,20 @@
 import React, { useEffect, useState } from 'react';
 import { urlFor, client } from './../../client';
 //import blockContent from '@sanity/block-content-to-react';
-import {Link} from 'react-router-dom';
+//import {Link} from 'react-router-dom';
 
 // import { urlFor } from '../lib/client'
 
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
 
-var bnr1 = require('./../../images/banner/bnr1.jpg');
+import Client1 from '../../images/clients/client1.png';
+import Client2 from '../../images/clients/client2.png';
+import Client3 from '../../images/clients/client3.png';
+import Client4 from '../../images/clients/client4.png';
+import Client5 from '../../images/clients/client5.png';
+import Client6 from '../../images/clients/client6.png';
+
 
 function Aboutus(){
 
@@ -35,7 +41,7 @@ function Aboutus(){
 		<div className="page-wraper">		
 			<Header />	
 			<div className="page-content bg-white">
-				<div className="dez-bnr-inr overlay-black-middle" style={{backgroundImage:"url(" + bnr1 + ")"}}>
+				<div className="dez-bnr-inr overlay-black-middle">
 					<div className="container">
 						<div className="dez-bnr-inr-entry">
 							<h1 className="text-white">About Us</h1>
@@ -106,7 +112,42 @@ function Aboutus(){
 													so you can be confident that you’ll find an opportunity that matches your skill and ambition.</p>
 									
 								</div>
-							</div>					
+							</div>	
+
+				{/* Start Clients Area */}
+							<div className='team'>
+								<h2 className="m-b25">Our Clients</h2>
+							</div>
+								<div className="client-logo-section">
+									<div className="container">
+										<div className="client-logo-wrapper col-lg-12 col-md-12 col-sm-12">
+											<div className="client-logo-carousel d-flex align-items-center justify-content-between">
+												<div className="client-logo">
+													<img src={Client1} alt="#"/>
+												</div>
+												<div className="client-logo">
+													<img src={Client2} alt="#"/>
+												</div>
+												<div className="client-logo">
+													<img src={Client3} alt="#"/>
+												</div>
+												<div className="client-logo">
+													<img src={Client4} alt="#"/>
+												</div>
+												<div className="client-logo">
+													<img src={Client5} alt="#"/>
+												</div>
+												<div className="client-logo">
+													<img src={Client6} alt="#"/>
+												</div>
+												
+											</div>
+										</div>
+									</div>
+								</div>
+					
+					{/* End Clients Area */}				
+					
 						</div>
 					</div>						
 				</div>
@@ -117,73 +158,3 @@ function Aboutus(){
 	
 }
 export default Aboutus;
-
-{/*
-	<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
-									<div className="icon-bx-wraper p-a30 center bg-gray radius-sm">
-									<div className='Team-image'>
-											<img src={Syam} alt='Syam'/>
-										</div>
-										<div className="icon-content">
-											<h5 className="dlab-tilte text-uppercase">Syam</h5>
-											<p>Cheif Operating Officer</p>
-										</div>
-									</div>
-								</div>
-								<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
-									<div className="icon-bx-wraper p-a30 center bg-gray radius-sm">
-									<div className='Team-image'>
-											<img src={Joy} alt='Joy'/>
-										</div>
-										<div className="icon-content">
-											<h5 className="dlab-tilte text-uppercase">Joy</h5>
-											<p>Multi Country Manager</p>
-										</div>
-									</div>
-								</div>
-								<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
-									<div className="icon-bx-wraper p-a30 center bg-gray radius-sm">
-									<div className='Team-image'>
-											<img src={Oliver} alt='Oliver'/>
-										</div>
-										<div className="icon-content">
-											<h5 className="dlab-tilte text-uppercase">Oliver</h5>
-											<p>Cheif Strategy Officer</p>
-										</div>
-									</div>
-								</div>
-								<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
-									<div className="icon-bx-wraper p-a30 center bg-gray radius-sm">
-									<div className='Team-image'>
-											<img src={Sridevi} alt='Sridevi'/>
-										</div>
-										<div className="icon-content">
-											<h5 className="dlab-tilte text-uppercase">Sridevi</h5>
-											<p>MD - UK</p>
-										</div>
-									</div>
-								</div>
-								<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
-									<div className="icon-bx-wraper p-a30 center bg-gray radius-sm">
-									<div className='Team-image'>
-											<img src={Satya} alt='Satya'/>
-										</div>
-										<div className="icon-content">
-											<h5 className="dlab-tilte text-uppercase">Satya</h5>
-											<p>CEO - India</p>
-										</div>
-									</div>
-								</div>
-								<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
-									<div className="icon-bx-wraper p-a30 center bg-gray radius-sm">
-									<div className='Team-image'>
-											<img src={Martin} alt='Martin'/>
-										</div>
-										<div className="icon-content">
-											<h5 className="dlab-tilte text-uppercase">Martin</h5>
-											<p>Cheif Training & Development Officer</p>
-										</div>
-									</div>
-								</div>
-
-*/}

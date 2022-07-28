@@ -24,6 +24,9 @@ import Jobdetail from './Pages/Jobdetail';
 
 // import job from ``
 
+import Resume from './Layout/Resume';
+
+import Apply from './Pages/Apply';
 import Aboutus from './Pages/Aboutus';
 import Contact from './Pages/Contact';
 import Register from './Pages/Register1';
@@ -55,17 +58,20 @@ const Markup2 = () => {
                 <Route path='/company-manage-job' exact component={Companymanage} />
                 <Route path='/browse-candidates' exact component={Browsecandidates} /> */}
                 <Route path='/company-post-jobs' exact component={Error404} />
-                <Route path='/company-manage-job' exact component={Error404} />
-                <Route path='/browse-candidates' exact component={Error404} /> 
+                {/* <Route path='/company-manage-job' exact component={Error404} />
+                <Route path='/browse-candidates' exact component={Error404} />  */}
 
             {/* ---- Jobs Browsing ---  */}
                 <Route path='/browse-job' exact component={Browsejobfiltergrid} />
                 <Route path='/browse-job-list' exact component={Browsejobfilterlist} />
 				
                 <Route path='/job-detail/:job' component={Jobdetail} />
+                <Route path='/Apply/:job' exact component={Apply} />
                 
                 <Route path='/about-us' exact component={Aboutus} />
                 <Route path='/contact'  exact component={Contact} />
+                
+                <Route path='/resume'  exact component={Resume} />
 
                 <Route path='/register' exact component={Register} />
                 <Route path='/login' exact component={Login} />

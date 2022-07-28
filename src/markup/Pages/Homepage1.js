@@ -5,6 +5,7 @@ import Footer from './../Layout/Footer';
 import IndexBanner from './../Element/IndexBanner';
 import Jobcategories from './../Element/Jobcategories';
 
+
 //Images
 var aboutImage = require('./../../images/img1.jpg');
 
@@ -43,11 +44,11 @@ function Homepage(){
 										organisations within the charity, education, finance, government, housing, professional 
 										services, property & construction, social care and technology sectors.
 									</p>
-									<Link to='/about-us' className='site-button'>More About Us</Link>
+									<Link to='/about-us' className='site-button p-t10 p-b10'>More About Us</Link>
 									
 								</div>
-								<div className='col-xl-6 col-md-6 pt-10'>
-									<img src={aboutImage} alt="aboutUs" className='' style={{width: '80%'}}/>
+								<div className='col-xl-6 col-md-6 '>
+									<img src={aboutImage} alt="aboutUs" className='p-t10 m-auto' style={{width: '100%'}}/>
 								</div>
 
 							</div>

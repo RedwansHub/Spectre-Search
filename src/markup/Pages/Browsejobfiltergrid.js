@@ -1,16 +1,16 @@
 import React, {useEffect, useState} from 'react';
-import {Link, Route, useParams} from 'react-router-dom';
+import {Link, Route} from 'react-router-dom';
 import { urlFor, client } from '../../client';
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
 import Jobfindbox from './../Element/Jobfindbox';
 import Accordsidebar from './../Element/Accordsidebar';
-
-var bnr = require('./../../images/banner/bnr1.jpg');
+// import { useDispatch } from 'react-redux';
 
 function Browsejobfiltergrid(){
 
 	//const singleJob = useParams();
+	//const dispatch = useDispatch();
 
 	const [jobInfo, setJobInfo] = useState([]);
 
@@ -76,7 +76,20 @@ function Browsejobfiltergrid(){
 																<img src={urlFor(item.image).width(65).url()} alt="" />
 															</Link>
 															<Link to={'#'} className="name">{item.recruiter}</Link>
-															<Link to={`/job-detail/${item.title}`} params={item.title} className="site-button ">See details</Link>
+															<Link to={`/job-detail/${item.title}`} 
+																//onClick={() => 
+																// dispatch.JobReducer({
+																// 	title: item.title,
+																// 	slug: item.slug,
+																// 	location: item.location, 
+																// 	Salary: item.salary,
+																// 	jobType: item.jobType,
+																// 	Description: item.Description,
+																// 	Requ: item.Requ,
+																// 	company: item.company,
+																// 	img: urlFor(item.image).url()
+																// })} 
+																params={item.title} className="site-button ">See details</Link>
 														</div>
 														<div className="">
 														</div>

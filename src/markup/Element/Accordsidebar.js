@@ -1,7 +1,7 @@
 import React, {useState} from 'react';
 import {Link} from 'react-router-dom';
 import { Accordion,Card } from 'react-bootstrap';
-import {Form} from 'react-bootstrap';
+//import {Form} from 'react-bootstrap';
 import RangeSlider from 'react-bootstrap-range-slider';
   
 function Accordsidebar(){
@@ -11,7 +11,7 @@ function Accordsidebar(){
 	return(
 		<div className="col-xl-3 col-lg-4 col-md-5 m-b10">
 			<aside id="accordion1" className=" sidebar-filter">
-				<Accordion defaultActiveKey="0" flush>
+				<Accordion defaultActiveKey="0">
 					<h6 className="title"><i className="fa fa-sliders m-r5"></i> Refined Search <Link to={"#"} className="font-12 float-right">Reset All</Link></h6>
 					
 					<Accordion.Toggle as={Card} eventKey="0">
@@ -26,7 +26,8 @@ function Accordsidebar(){
 						<Accordion.Collapse eventKey="0">
 							<div id="salary" className="acod-body collapse show">
 								<div className="acod-content">
-								<label style={{float: 'right'}} for="salarayRange" class="form-label">£<span>{value}</span>K</label>
+								<label style={{float: 'right'}} >£{value}K</label>
+									<h6 className="">Minimum Salary</h6>
 									<RangeSlider
 										onChange={changeEvent => setValue(changeEvent.target.value)}
 										style={{width:'90%'}}
@@ -55,11 +56,15 @@ function Accordsidebar(){
 									</div>
 									<div className="custom-control custom-radio">
 										<input className="custom-control-input" id="two-years" type="radio" name="radio-years" />
-										<label className="custom-control-label" htmlFor="two-years">Data Analysis</label>
+										<label className="custom-control-label" htmlFor="two-years">Human resources</label>
 									</div>
 									<div className="custom-control custom-radio">
 										<input className="custom-control-input" id="three-years" type="radio" name="radio-years" />
-										<label className="custom-control-label" htmlFor="three-years">Sales</label>
+										<label className="custom-control-label" htmlFor="three-years">Customer Service</label>
+									</div>
+									<div className="custom-control custom-radio">
+										<input className="custom-control-input" id="three-year" type="radio" name="radio-years" />
+										<label className="custom-control-label" htmlFor="three-years">Education</label>
 									</div>
 									<div className="custom-control custom-radio">
 										<input className="custom-control-input" id="four-years" type="radio" name="radio-years" />
@@ -67,7 +72,7 @@ function Accordsidebar(){
 									</div>
 									<div className="custom-control custom-radio">
 										<input className="custom-control-input" id="five-years" type="radio" name="radio-years" />
-										<label className="custom-control-label" htmlFor="five-years">Financial Career</label>
+										<label className="custom-control-label" htmlFor="five-years">Housing & Revenues</label>
 									</div>
 								</div>
 							</div>

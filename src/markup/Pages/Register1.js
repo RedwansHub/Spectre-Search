@@ -11,9 +11,7 @@ function Register1(){
 		<>
 			<Header />
 			<div className="page-content">
-				<div className="dez-bnr-inr overlay-black-middle bg-pt" style={{backgroundImage: `url(${bnr})`}}>
-					<PageTitle motherName="Home" activeName="Register" />
-				</div>
+			
 				<div className="section-full content-inner browse-job shop-account">
 					<div className="container">
 						<div className="row">
@@ -40,7 +38,7 @@ function Register1(){
 												<input name="dzName" required="" className="form-control " placeholder="Type Password" type="password" />
 											</div>
 											<div className="text-left">
-												<button className="site-button button-lg outline outline-2">CREATE</button>
+												<button className="site-button button-lg outline outline-2">Register</button>
 											</div>
 										</form>
 									</div>

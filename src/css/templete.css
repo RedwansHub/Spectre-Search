@@ -220,6 +220,7 @@
 		text-align: center;
 	}
 }
+
 @media only screen and (max-width: 575px){
 	.dez-bnr-inr .nav li a,
 	.dez-bnr-inr .nav li a:hover,
@@ -478,6 +479,12 @@
 .applybtn{
 	padding-left: 10px;
 }
+@media only screen and (max-width: 800px) {
+	.applybtn .site-button{
+		width: 120%;
+	}
+
+}
 .detailsbtn2{
 	width: 500px;
 	height: 70px;
@@ -489,6 +496,44 @@
 .detailsbtn2 .name{
 	margin-left: 10px;
 	font-weight: 600;
+}
+
+.job-title {
+	font-size: 50px;
+}
+
+
+.job-background{
+	background-image: url("./../images/background/bg7.png");
+	background-repeat: no-repeat;
+	background-size: 100%;
+	background-position-y: -50px;
+}
+
+@media only screen and (max-width: 800px) {
+	.job-background {
+		background-position-y: 50px;
+		background-size: 250%;
+	}
+}
+
+.job-info-box .under-title{
+	list-style-type: none;
+	padding-top: 15px;
+	padding-bottom: 20px;
+}
+.contract-title{
+	margin-left: 10px;
+	font-size: 20px;
+	font: black;
+	font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+	padding-top: 80px;
+}
+
+
+.under-picture{
+	list-style-type: none;
+	padding-left: 25px;
 }
 
 @media only screen and (max-width: 587px) {
@@ -813,6 +858,9 @@
 .post-job-bx h4{
 	margin-bottom:10px;
 }
+.acod-content .salary-min{	
+	border: 2px solid red;
+}
 .salary-bx span{
 	color:#000;
 	font-family:rubik;
@@ -834,6 +882,63 @@
 	color: #e1e7ff;
 	transition: all 0.5s;
 	
+}
+
+
+/* Apply Page */
+
+.apply-container{
+    background-color: #38c8f0;
+	height: 250px;
+}
+.apply-container .inner-box{
+}
+.applyForm{
+	margin-left: 200px;
+	margin-right: 250px;
+	height: 650px;
+}
+.applyForm .Form h4{
+	padding-bottom: 15px;
+}
+
+.applyForm .Form {
+	Margin-top: 50px;
+	height: 550px;
+	box-shadow:  0 0 10px 0 rgba(0,24,128,0.1);
+}
+.applyForm .sideBox {	
+	padding-bottom: 50px;
+	Margin-top: -450px;
+	height: 450px;
+	margin-left: 120px;
+	box-shadow:  0 0 10px 0 rgba(0,24,128,0.1);
+}
+
+.applyForm .sideBox .row{
+	align-items: center;
+	justify-content: center;
+	
+}
+.applyForm .sideBox .row .site-button .icon{
+		margin-bottom: -25px;
+		height: 25px;
+		width: 10px;	
+}
+.applyForm .sideBox .row .site-button .text{
+		padding-bottom: 0px;
+		margin-left: 25px;
+		width: 10px;	
+		
+}
+.applyForm .sideBox .row .site-button{
+	width: 130px;
+}
+
+.applyForm .sideBox  p{
+	font-weight: 600;
+	text-align: center;
+	padding-top: 18px;
 }
 
 /* Candidates Box */
