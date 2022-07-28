@@ -226,7 +226,7 @@ class Header extends Component{
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Gender</Form.Label>
 													<Form.Control required name="gender" as="select" custom className="select-btn" style={{height: '50px'}} onChange={(e) => this.handleForm(e)}>
-														<option> </option>
+														<option>Select a gender</option>
 														<option>Male</option>
 														<option>Female</option>
 														<option>Other</option>
@@ -234,7 +234,7 @@ class Header extends Component{
 												</Form.Group>
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>DOB</Form.Label>
-													<Form.Control required type= "dob" name="dob" placeholder='Enter Address' onChange={(e) => this.handleForm(e)}/>
+													<Form.Control required type= "dob" name="dob" placeholder='Date of Birth' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 											</Row>
 											<Row className="mb-1">
@@ -250,7 +250,7 @@ class Header extends Component{
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Location</Form.Label>
-													<Form.Control required type= "location" name="location" placeholder='Enter Address' onChange={(e) => this.handleForm(e)}/>
+													<Form.Control required type= "location" name="location" placeholder='Enter your Address' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 											</Row>
 													
