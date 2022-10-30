@@ -9,7 +9,7 @@ import Col from 'react-bootstrap/Col';
 // import Logout from './Logout';
 // import CvModal from './CvModal';
 import Emailjs from '@emailjs/browser';
-import logo2 from './../../images/spectre.png';
+import logo2 from './../../images/SSR-Logo.png';
 
 	
 class Header extends Component{
@@ -134,8 +134,8 @@ class Header extends Component{
 	render(){	
 		return(
 			<>
-				<header className="site-header mo-left header fullwidth">
-					<div className="sticky-header main-bar-wraper navbar-expand-lg">
+				<header className="Sticky-header mo-left header fullwidth">
+					<div className="sticky-header main-bar-wraper navbar-expand-lg shadow">
 						<div className="main-bar clearfix">
 							<div className="container clearfix">
 								
@@ -155,16 +155,13 @@ class Header extends Component{
 									</div>
 									<ul className="nav navbar-nav">
 										<li><Link to={"/about-us"}>About Us</Link></li>
-										<li >
-											
-											<Link to={'#'} >For Candidates</Link>
+										<li><Link to={'#'} >For Candidates</Link>
 											<ul className="sub-menu">
 												<li><Link to={"/browse-job"} className="dez-page">Browse Job </Link></li>
 												<li><Link to={"#"}  className="dez-page"><span onClick={this.handleShow}>Quick Upload CV</span></Link></li>
 											</ul>
 										</li>
-										<li >
-											<Link to={"/company-post-jobs"} >For Employers</Link>
+										<li><Link to={"/company-post-jobs"} >For Employers</Link>
 											{/* <ul className="sub-menu">
 												<li><Link to={"/company-post-jobs"} className="dez-page">Post A Jobs </Link></li>
 												<li><Link to={"/company-manage-job"} className="dez-page">Manage jobs </Link></li>
@@ -215,18 +212,18 @@ class Header extends Component{
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>First Name</Form.Label>
-													<Form.Control required type= "name" name="name" placeholder='First Name' onChange={(e) => this.handleForm(e)} />
+													<Form.Control required type= "name" name="name" placeholder='Firstname' onChange={(e) => this.handleForm(e)} />
 												</Form.Group>
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Last Name</Form.Label>
-													<Form.Control type= "surname" name="surname" placeholder='Last Name ' onChange={(e) => this.handleForm(e)} required/>
+													<Form.Control type= "surname" name="surname" placeholder='Lastname ' onChange={(e) => this.handleForm(e)} required/>
 												</Form.Group>
 											</Row>
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Gender</Form.Label>
-													<Form.Control required name="gender" as="select" custom className="select-btn" style={{height: '50px'}} onChange={(e) => this.handleForm(e)}>
-														<option> </option>
+													<Form.Control required name="gender" as="select" placeholder='Choose your Gender' custom className="select-btn" style={{height: '50px'}} onChange={(e) => this.handleForm(e)}>
+														
 														<option>Male</option>
 														<option>Female</option>
 														<option>Other</option>
@@ -234,13 +231,13 @@ class Header extends Component{
 												</Form.Group>
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>DOB</Form.Label>
-													<Form.Control required type= "dob" name="dob" placeholder='Enter Address' onChange={(e) => this.handleForm(e)}/>
+													<Form.Control required type= "dob" name="dob" placeholder='Date of Birth' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 											</Row>
 											<Row className="mb-1">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Email Address</Form.Label>
-													<Form.Control required type= "email" name="email" placeholder='Enter your Email ' onChange={(e) => this.handleForm(e)}/>
+													<Form.Control required type= "email" name="email" placeholder='Email Address ' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Mobile Number</Form.Label>
@@ -250,7 +247,7 @@ class Header extends Component{
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Location</Form.Label>
-													<Form.Control required type= "location" name="location" placeholder='Enter Address' onChange={(e) => this.handleForm(e)}/>
+													<Form.Control required type= "location" name="location" placeholder='Address' onChange={(e) => this.handleForm(e)}/>
 												</Form.Group>
 											</Row>
 													

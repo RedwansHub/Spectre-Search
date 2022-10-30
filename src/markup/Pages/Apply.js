@@ -51,11 +51,11 @@ function Apply(job){
                             <Row className="mb-0">
                                 <Form.Group  as={Col} md="6" >
                                     <Form.Label>First Name</Form.Label>
-                                    <Form.Control required type="name" name= "name" placeholder='Name '/>
+                                    <Form.Control required type="name" name= "name" placeholder='Enter Firstname '/>
                                 </Form.Group>
                                 <Form.Group  as={Col} md="6" >
                                     <Form.Label>Last Name</Form.Label>
-                                    <Form.Control required type="surname" name= "surname"  placeholder='surname '/>
+                                    <Form.Control required type="surname" name= "surname"  placeholder='Enter Lastname '/>
                                 </Form.Group>
                             </Row>
                             <Row className="mb-0">

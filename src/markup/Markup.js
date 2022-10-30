@@ -2,7 +2,7 @@ import React from 'react';
 import { Route, Switch } from 'react-router-dom';
 
 import Homepage from './Pages/Homepage1';
-import Homepage2 from './Pages/Homepage2';
+// import Homepage2 from './Pages/Homepage2';
 
 import Jobprofile from './Pages/Jobprofile';
 import Jobmyresume from './Pages/Jobmyresume';
@@ -23,7 +23,7 @@ import Browsecandidates from './Pages/Browsecandidates';
 import Aboutus from './Pages/Aboutus';
 import Jobdetail from './Pages/Jobdetail';
 import Companies from './Pages/Companies';
-import Freejobalerts from './Pages/Freejobalerts';
+// import Freejobalerts from './Pages/Freejobalerts';
 import Browsejoblist from './Pages/Browsejoblist';
 import Browsejobgrid from './Pages/Browsejobgrid';
 import Browsejobfilterlist from './Pages/Browsejobfilterlist';
@@ -64,7 +64,7 @@ const Markup= () => {
 				<Switch>
 					<Route path='/' exact component={Homepage} />
 					<Route path='/home' exact component={Homepage} />
-					<Route path='/index-2' exact component={Homepage2} />
+					{/* <Route path='/index-2' exact component={Homepage2} /> */}
 					
 					<Route path='/jobs-profile' exact component={Jobprofile} />
 					<Route path='/jobs-my-resume' exact component={Jobmyresume} />
@@ -86,7 +86,7 @@ const Markup= () => {
 					<Route path='/about-us' exact component={Aboutus} />
 					<Route path='/job-detail' exact component={Jobdetail} />
 					<Route path='/companies' exact component={Companies} />
-					<Route path='/free-job-alerts' exact component={Freejobalerts} />
+					{/* <Route path='/free-job-alerts' exact component={Freejobalerts} /> */}
 					<Route path='/browse-job-list' exact component={Browsejoblist} />
 					<Route path='/browse-job-grid' exact component={Browsejobgrid} />
 					<Route path='/browse-job-filter-list' exact component={Browsejobfilterlist} />

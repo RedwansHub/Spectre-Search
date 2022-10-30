@@ -25,7 +25,7 @@ function Jobcategories(){
 						<Link to={'/browse-job'}>
 							<img className="imageBox" src={urlFor(data.image).url()} alt=""/>
 						</Link>
-					{/* this is where you stopped last night */}
+					
 					<div className="icon-content">
 						<Link to={"/browse-job"} className="dez-tilte">{data.title}</Link>
 					</div>

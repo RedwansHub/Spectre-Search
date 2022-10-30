@@ -64,23 +64,36 @@ function Aboutus(){
 											*/}
 										</div>
 										<div className="col-md-12 col-lg-6">
-											
-										 <img src={urlFor(data.image).width(500).url()} alt=""/>
+											{data.image ? <img src={urlFor(data.image).width(500).url()} alt=""/>
+											: <p className="m-b15">{data.body}</p>
+											}
 											
 										</div>
 									</div>
 								))}
 							</div>
-							<div className='team'>
-								<h2 className="m-b5">Our Team</h2>
-							</div>
-							<div className="row">
+							{/* Our Experts */}
+							<div className="row align-items-center m-b50 m-t50">
+								<div className="  m-b20 ">
+									<h2 className="m-b25">Our Experts</h2>
+									<p className=" text-center m-b15">Our consultants have several years’ experience in specific sectors, up-to-date market knowledge 
+														and are marking-leading experts in Technology Recruitment. 
+														Our values are aligned with providing quality customer service to our clients and our candidate pool, 
+														building an honest, professional relationship from the ground level up. </p>
+									
+									
+									
+								</div>
+								
+							</div>	
+
+							{/* <div className="row">
 								{teamData.map((data2, index) => (
 								
 									<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
 										<div className="icon-bx-wraper p-a30 center bg-gray radius-sm"  key={data2.name + index}>
 											<div className='Team-image'>
-												<img src={urlFor(data2.image).width(300).url()} alt='Nabil'/>
+												<img src={urlFor(data2.image).width(300).url()} alt=''/>
 											</div>
 											<div className="icon-content">
 												<h5 className="dlab-tilte text-uppercase">{data2.name}</h5>
@@ -89,62 +102,50 @@ function Aboutus(){
 										</div>
 									</div>
 								))}
-							</div>
+							</div> */}
 							<div className="row align-items-center m-b50 m-t50">
 								<div className="col-md-12 col-lg-6 m-b20 ">
-									<h2 className="m-b25">What makes us different</h2>
-									<p className="m-b15">Our size is our strength. We’re small enough to care but big enough to make an impact. 
-														Genuine passion and enthusiasm for what we do, combined with a deep understanding of our 
-														sectors and our ability to respond and adapt swiftly to clients’ needs is what makes us unique.</p>
+									<h2 className="m-b25">Our Clients and Candidates</h2>
+									<p className="m-b15">We provide a fast recruitment process but not forgetting our clients and candidates’ requirements.
+														We provide staffing solutions to the public and private sectors. Our mission is to bring together 
+														people and employers who look for a sense of purpose in the work they do. 
+														And we understand that jobseekers now more than ever demand more than just a competitive salary. 
+														
+														</p>
 									
-									<p className=''>Our success is our people. We pride ourselves on our commitment to our most important assets – our people – 
-										through recognition and rewards. We take care of them so that they can take care of you.</p>
+									<p className=''></p>
 									
 								</div>
 								<div className="col-md-12 col-lg-6">
-								<p className="m-b15 m-t10">Our core values underpin everything we do and are reflected by our people. Respect, determination, teamwork, integrity, 
-													understanding and fun are central to how we work with each other and our clients and candidates. 
-													Our consultants take the time to understand your needs and are dedicated to guiding and supporting you through the recruitment process.</p>
-									
-									
-								<p className="m-b15">Our relationships set us apart. We work closely with some of the largest organisations in further 
-													education, housing, social care, charity and more. Our clients trust us with exciting and often exclusive roles, 
-													so you can be confident that you’ll find an opportunity that matches your skill and ambition.</p>
+							
+								<p className="m-b15">So, we strive to place them in opportunities that are fulfilling and aligned to their values, with organisations 
+													that make a difference. We have a wide pool of qualified IT candidates that are looking for their next challenge 
+													and a brighter future.</p>
 									
 								</div>
 							</div>	
-
-				{/* Start Clients Area */}
-							<div className='team'>
-								<h2 className="m-b25">Our Clients</h2>
-							</div>
-								<div className="client-logo-section">
-									<div className="container">
-										<div className="client-logo-wrapper col-lg-12 col-md-12 col-sm-12">
-											<div className="client-logo-carousel d-flex align-items-center justify-content-between">
-												<div className="client-logo">
-													<img src={Client1} alt="#"/>
-												</div>
-												<div className="client-logo">
-													<img src={Client2} alt="#"/>
-												</div>
-												<div className="client-logo">
-													<img src={Client3} alt="#"/>
-												</div>
-												<div className="client-logo">
-													<img src={Client4} alt="#"/>
-												</div>
-												<div className="client-logo">
-													<img src={Client5} alt="#"/>
-												</div>
-												<div className="client-logo">
-													<img src={Client6} alt="#"/>
-												</div>
-												
-											</div>
-										</div>
-									</div>
+							<div className="row align-items-center m-b50 m-t50">
+								<div className="col-md-12 col-lg-6 m-b20 ">
+									<h2 className="m-b25">Honesty and Integrity</h2>
+									<p className="m-b15">We understand the needs and requirements of employers and employees to ensure they are the right fit 
+														and create lasting value for both parties. Our market knowledge and experience commit’s us to
+														making sure our clients and candidates are satisfied with our service. 
+														We pride ourselves on building long-term relationships.</p>
+									
 								</div>
+								<div className="col-md-12 col-lg-6">
+							
+								<p className="m-b15">We look to build trusting, professional relationships with clients and candidates, 
+													acting as dedicated partners for their requirements. We’ll be clear about the challenges 
+													of hiring a role and we’ll only suggest appropriate solutions. We provide honest, 
+													constructive feedback to candidates. This open, transparent approach leads 
+													to the best possible results for both parties.</p>
+									
+								</div>
+							</div>	
+							
+				{/* Start Clients Area */}
+							
 					
 					{/* End Clients Area */}				
 					

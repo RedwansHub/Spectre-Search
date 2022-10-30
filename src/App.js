@@ -1,5 +1,4 @@
 import React,{  Suspense, useEffect } from 'react';
-import Index from './markup/Markup2';
 import { connect, useDispatch } from 'react-redux';
 import {  Route, Switch, withRouter } from 'react-router-dom';
 import { checkAutoLogin } from './services/AuthService';
@@ -12,6 +11,7 @@ import './plugins/slick/slick.min.css';
 import './plugins/slick/slick-theme.min.css';
 
 
+import Index from './markup/Markup2';
 import Login from './markup/Pages/Loginpage1';
 import SignUp from './markup/Pages/Register1';
 
@@ -26,7 +26,6 @@ import SignUp from './markup/Pages/Register1';
 
 function App (props) {
 
-    
     const dispatch = useDispatch();
     useEffect(() => {
         checkAutoLogin(dispatch, props.history);
@@ -69,8 +68,8 @@ function App (props) {
                     </div>
                   }
                 >
-                    {routes}
                 </Suspense>
+                    <Index />
 			</div>
 		);
 	}
