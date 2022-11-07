@@ -6,7 +6,7 @@ function Footer(){
 		<footer className="site-footer">
 			<div className="footer-top">
 				<div className="col-lg-12 text-center">
-					<img src={require("./../../images/Spectre-Logo-White.png")} width="180" className="m-b15" alt=""/>
+					<img src={require("./../../images/assets/White-Logo-T.png")} width="210" className="m-b15" alt=""/>
 				</div>
 				<div className="container">
 					<div className="row">

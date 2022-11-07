@@ -9,7 +9,8 @@ import Col from 'react-bootstrap/Col';
 // import Logout from './Logout';
 // import CvModal from './CvModal';
 import Emailjs from '@emailjs/browser';
-import logo2 from './../../images/SSR-Logo.png';
+import Logo from './../../images/assets/Black-logo.png';
+// import logo2 from './../../images/SSR-Logo.png';
 
 	
 class Header extends Component{
@@ -140,7 +141,7 @@ class Header extends Component{
 							<div className="container clearfix">
 								
 								<div className="logo-header mostion">
-									<Link to={"/"}><img src={logo2} className="logo" alt="img" /></Link>
+									<Link to={"/"}><img src={Logo} className="logo" alt="img" /></Link>
 								</div>
 								
 								 <button className="navbar-toggler collapsed navicon  justify-content-end" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
@@ -151,7 +152,7 @@ class Header extends Component{
 								  
 								<div className="header-nav navbar-collapse collapse myNavbar justify-content-start" id="navbarNavDropdown"> 
 									<div className="logo-header mostion d-md-block d-lg-none">
-										<Link to={'/'} className="dez-page"><img src={logo2} alt="" /></Link>
+										<Link to={'/'} className="dez-page"><img src={Logo} alt="" /></Link>
 									</div>
 									<ul className="nav navbar-nav">
 										<li><Link to={"/about-us"}>About Us</Link></li>
@@ -161,13 +162,13 @@ class Header extends Component{
 												<li><Link to={"#"}  className="dez-page"><span onClick={this.handleShow}>Quick Upload CV</span></Link></li>
 											</ul>
 										</li>
-										<li><Link to={"/company-post-jobs"} >For Employers</Link>
-											{/* <ul className="sub-menu">
+										{/* <li><Link to={"/company-post-jobs"} >For Employers</Link>
+											<ul className="sub-menu">
 												<li><Link to={"/company-post-jobs"} className="dez-page">Post A Jobs </Link></li>
 												<li><Link to={"/company-manage-job"} className="dez-page">Manage jobs </Link></li>
 												<li><Link to={"/browse-candidates"}  className="dez-page">Browse Candidates</Link></li>
-											</ul> */}
-										</li>
+											</ul>
+										</li> */}
 										
 										<li><Link to={"/contact"}>Contact Us</Link></li>
 										{/* <li><Link to={"/login"} className="site-button">Login / Register</Link></li> */}
@@ -220,24 +221,7 @@ class Header extends Component{
 												</Form.Group>
 											</Row>
 											<Row className="mb-2">
-												<Form.Group  as={Col} md="6" >
-													<Form.Label>Gender</Form.Label>
-<<<<<<< HEAD
-													<Form.Control required name="gender" as="select" placeholder='Choose your Gender' custom className="select-btn" style={{height: '50px'}} onChange={(e) => this.handleForm(e)}>
-														
-=======
-													<Form.Control required name="gender" as="select" custom className="select-btn" style={{height: '50px'}} onChange={(e) => this.handleForm(e)}>
-														<option>Select a gender</option>
->>>>>>> fb099f6245deecd4be8a39f47aa3ee4b10f40f01
-														<option>Male</option>
-														<option>Female</option>
-														<option>Other</option>
-													</Form.Control>
-												</Form.Group>
-												<Form.Group  as={Col} md="6" >
-													<Form.Label>DOB</Form.Label>
-													<Form.Control required type= "dob" name="dob" placeholder='Date of Birth' onChange={(e) => this.handleForm(e)}/>
-												</Form.Group>
+												
 											</Row>
 											<Row className="mb-1">
 												<Form.Group  as={Col} md="6" >
@@ -252,11 +236,17 @@ class Header extends Component{
 											<Row className="mb-2">
 												<Form.Group  as={Col} md="6" >
 													<Form.Label>Location</Form.Label>
-<<<<<<< HEAD
-													<Form.Control required type= "location" name="location" placeholder='Address' onChange={(e) => this.handleForm(e)}/>
-=======
 													<Form.Control required type= "location" name="location" placeholder='Enter your Address' onChange={(e) => this.handleForm(e)}/>
->>>>>>> fb099f6245deecd4be8a39f47aa3ee4b10f40f01
+													</Form.Group>
+													<Form.Group  as={Col} md="6" >
+													<Form.Label>Profession</Form.Label>
+													<Form.Control required name="gender" as="select" custom className="select-btn" style={{height: '50px'}} onChange={(e) => this.handleForm(e)}>
+														<option>Technology</option>
+														<option>Software Developer</option>
+														<option>Full stack Developer</option>
+														<option>UI/UX Designer</option>
+														<option>Other</option>
+													</Form.Control>
 												</Form.Group>
 											</Row>
 													

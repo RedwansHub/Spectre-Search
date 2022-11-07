@@ -265,7 +265,10 @@
 .about-timeline::after{
 	background-color: #ff2a2a;
 }
-
+.Honesty{
+	display: grid;
+	place-items: center;
+}
 /* post-job */
 .post-job .dropdown-toggle{
 	height: 50px;
@@ -2242,7 +2245,6 @@
 
 /* Sidebar Filter */
 .sidebar-filter{
-	box-shadow: 0 0 10px 0 rgba(0,24,128,0.1);
 }
 .sidebar-filter .title {
     font-size: 16px;
@@ -2251,7 +2253,6 @@
 }
 .sidebar-filter .acod-head .acod-title a,
 .sidebar-filter .acod-head .acod-title .collapsed {
-	padding: 10px 15px;
 	border-width: 1px 0;
 	border-radius: 0;
 }

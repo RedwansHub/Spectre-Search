@@ -8,7 +8,7 @@ import { urlFor, client } from './../../client';
 import Header from './../Layout/Header';
 import Footer from './../Layout/Footer';
 
-import Client1 from '../../images/clients/client1.png';
+import Client from '../../images/clients/face.jpg';
 import Client2 from '../../images/clients/client2.png';
 import Client3 from '../../images/clients/client3.png';
 import Client4 from '../../images/clients/client4.png';
@@ -87,7 +87,7 @@ function Aboutus(){
 								
 							</div>	
 
-							{/* <div className="row">
+							<div className="row">
 								{teamData.map((data2, index) => (
 								
 									<div className="teamBox col-lg-3 col-md-4 col-sm-12 m-b30">
@@ -102,10 +102,10 @@ function Aboutus(){
 										</div>
 									</div>
 								))}
-							</div> */}
+							</div>
 							<div className="row align-items-center m-b50 m-t50">
 								<div className="col-md-12 col-lg-6 m-b20 ">
-									<h2 className="m-b25">Our Clients and Candidates</h2>
+									<h2 className="m-b45 " >Our Clients and Candidates</h2>
 									<p className="m-b15">We provide a fast recruitment process but not forgetting our clients and candidates’ requirements.
 														We provide staffing solutions to the public and private sectors. Our mission is to bring together 
 														people and employers who look for a sense of purpose in the work they do. 
@@ -117,16 +117,17 @@ function Aboutus(){
 									
 								</div>
 								<div className="col-md-12 col-lg-6">
-							
-								<p className="m-b15">So, we strive to place them in opportunities that are fulfilling and aligned to their values, with organisations 
-													that make a difference. We have a wide pool of qualified IT candidates that are looking for their next challenge 
-													and a brighter future.</p>
+								<img src={Client} alt='' width={500}/>
+								
 									
 								</div>
 							</div>	
-							<div className="row align-items-center m-b50 m-t50">
+							
+							<div className='Honesty'>
+								<h2 className="m-b25">Honesty and Integrity</h2>
+							</div>
+							<div className="row align-items-center m-b50 m-t10">
 								<div className="col-md-12 col-lg-6 m-b20 ">
-									<h2 className="m-b25">Honesty and Integrity</h2>
 									<p className="m-b15">We understand the needs and requirements of employers and employees to ensure they are the right fit 
 														and create lasting value for both parties. Our market knowledge and experience commit’s us to
 														making sure our clients and candidates are satisfied with our service. 
